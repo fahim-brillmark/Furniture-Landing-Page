@@ -6,11 +6,10 @@ body {
 }
 
 .bg-image {
-  height: 100vh;
+  height: 150vh;
   background-image: url("images/banner-bg.png");
   background-size: cover;
   background-position: bottom;
-
   background-repeat: no-repeat;
 }
 
@@ -90,6 +89,64 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Banner Stylings */
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.banner h2 {
+  font-size: 80px;
+  margin-bottom: 0;
+}
+
+.banner h2,
+.banner p {
+  color: #ffffff;
+  text-align: center;
+}
+
+.banner p {
+  font-weight: 200;
+  font-size: 24px;
+  margin: 0;
+}
+
+.banner-input-wrapper {
+  position: relative;
+}
+
+.banner-input-wrapper input {
+  width: 310px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.75);
+  padding: 20px;
+  border-radius: 42px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 0.86px solid rgba(255, 255, 255, 0.5);
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 18px;
+}
+
+.search-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #e58411;
+  border-radius: 50%;
+  position: absolute;
+  top: 12px;
+  right: 11px;
 }
 
 /* Why choosing us stylings */
@@ -181,9 +238,10 @@ nav {
     opacity: 0;
     overflow: hidden;
     flex-direction: column;
-    position: relative;
+    position: absolute;
+    top: 44px;
+    z-index: 1;
     background-color: #808080;
-
     width: 100%;
     padding: 0;
     transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
@@ -196,7 +254,7 @@ nav {
   nav ul.active {
     max-height: 400px;
     opacity: 1;
-    width: 100%;
+    width: calc(95% - 2rem - 1vw);
     padding: 1.5rem 0;
   }
   .nav-menu-desktop {
@@ -243,6 +301,22 @@ nav {
 
   .shopping-bag.desktop {
     display: none;
+  }
+
+  /* Banner Stylings */
+  .banner h2 {
+    font-size: 40px;
+  }
+  .banner p {
+    font-size: 15px;
+  }
+
+  .banner-input-wrapper input {
+    width: 210px;
+  }
+
+  .banner {
+    padding: 0 1rem;
   }
 
   /* Why choosing us mobile stylings */
