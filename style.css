@@ -2,15 +2,16 @@ body {
   font-family: "Gilroy", sans-serif;
   /* background: black; */
   margin: 0;
- 
+  padding-bottom: 1000px;
 }
 
 .bg-image {
-    height: 100vh;
+  height: 100vh;
   background-image: url("images/banner-bg.png");
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
+  background-size: cover;
+  background-position: bottom;
+
+  background-repeat: no-repeat;
 }
 
 ul {
@@ -91,11 +92,58 @@ nav {
   justify-content: center;
 }
 
+/* Why choosing us stylings */
+
+.why-choose-us {
+  display: flex;
+  align-items: center;
+}
+
+.why-choose-us-title {
+  font-size: 40px;
+  font-weight: bold;
+  width: 30%;
+  padding-right: 2.5rem;
+}
+
+.choices {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 4rem);
+  gap: 4rem;
+}
+
+.choice {
+  width: 100%;
+}
+.choice h3 {
+  font-size: 22px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info p {
+  font-size: 14px;
+  color: #e58411;
+}
 /* Desktop Stylings */
 
 @media screen and (min-width: 768px) {
   .nav-menu-mobile {
     display: none;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 768px) {
+  .why-choose-us-title {
+    font-size: 25px;
+  }
+  .choice h3 {
+    font-size: 20px;
   }
 }
 
@@ -195,5 +243,22 @@ nav {
 
   .shopping-bag.desktop {
     display: none;
+  }
+
+  /* Why choosing us mobile stylings */
+  .why-choose-us {
+    flex-direction: column;
+  }
+
+  .why-choose-us-title {
+    width: 100%;
+    padding-right: 0;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .choices {
+    flex-direction: column;
+    gap: 2rem;
   }
 }
