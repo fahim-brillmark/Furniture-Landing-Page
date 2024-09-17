@@ -1,0 +1,199 @@
+body {
+  font-family: "Gilroy", sans-serif;
+  /* background: black; */
+  margin: 0;
+ 
+}
+
+.bg-image {
+    height: 100vh;
+  background-image: url("images/banner-bg.png");
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+
+ul {
+  padding: 0;
+}
+
+.container {
+  padding: 0 calc(2rem + 1vw);
+}
+
+/* Default stylings for Navigation */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.first-nav-link {
+  display: flex;
+  gap: 8px;
+}
+
+.inverted-caret {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.nav-menu-desktop {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.nav-menu-desktop ul {
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu-desktop li {
+  list-style: none;
+}
+
+.nav-menu-desktop a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.text-logo-wrapper h2 {
+  color: #ffffff;
+  font-size: 28px;
+}
+
+.shopping-bag {
+  position: relative;
+}
+
+.bag-count {
+  width: 20px;
+  height: 24px;
+  background: #e58411;
+  color: #ffffff;
+  position: absolute;
+  font-size: 13px;
+  top: 7px;
+  left: 17px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Desktop Stylings */
+
+@media screen and (min-width: 768px) {
+  .nav-menu-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1300px) and (min-width: 768px) {
+  /* Nav Links Stylings */
+  .text-logo-wrapper h2 {
+    font-size: 24px;
+  }
+
+  .nav-menu-desktop {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+    gap: 51px;
+  }
+  .nav-menu-desktop a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #ffffff;
+  }
+}
+
+/* Mobile Stylings */
+
+@media screen and (max-width: 767px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav ul {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    flex-direction: column;
+    position: relative;
+    background-color: #808080;
+
+    width: 100%;
+    padding: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+  }
+
+  nav a {
+    color: black;
+  }
+
+  nav ul.active {
+    max-height: 400px;
+    opacity: 1;
+    width: 100%;
+    padding: 1.5rem 0;
+  }
+  .nav-menu-desktop {
+    display: none;
+  }
+
+  .nav-menu-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .nav-menu-mobie ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-menu-mobile li {
+    list-style: none;
+  }
+
+  .nav-menu-mobile a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffffff;
+  }
+
+  .text-logo-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger-menu i {
+    font-size: 22px;
+    color: #ffffff;
+  }
+
+  .shopping-bag.desktop {
+    display: none;
+  }
+}
