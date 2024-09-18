@@ -1,6 +1,46 @@
-const hamburger = document.querySelector(".hamburger-menu");
-const navMenu = document.querySelector(".nav-menu-mobile");
+document.addEventListener("DOMContentLoaded", () => {
 
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
+  const firstNavLinkMobile = document.querySelectorAll(".first-nav-link")[1];
+  const firstNavLinkDesktop = document.querySelectorAll(".first-nav-link")[0];
+  const submenu = document.querySelectorAll(".submenu")[1];
+  const submenuDesktop = document.querySelectorAll(".submenu")[0];
+  const hamburger = document.querySelector(".hamburger-menu");
+  const navMenu = document.querySelector(".nav-menu-mobile");
+  const caretImg = document.querySelectorAll(".caret-img")[1]
+  const caretImgDesktop = document.querySelectorAll(".caret-img")[0]
+  hamburger.addEventListener("click", () => {
+    console.log("hamburger clicked");
+      navMenu.classList.toggle("active");
+  });
+
+
+  firstNavLinkMobile.addEventListener("click", (event) => {
+    event.preventDefault();
+      console.log('firstNavLink clicked');
+      submenu.classList.toggle("active"); 
+
+   
+    if (submenu.classList.contains("active")) {
+      caretImg.style.transform = "rotate(180deg)"; 
+    } 
+  
+  else {
+    caretImg.style.transform = "rotate(0deg)"; 
+  }
+  });
+
+  firstNavLinkDesktop.addEventListener("click", (event) => {
+    event.preventDefault();
+      console.log('firstNavLink clicked');
+      submenuDesktop.classList.toggle("active"); 
+
+   
+    if (submenuDesktop.classList.contains("active")) {
+      caretImgDesktop.style.transform = "rotate(180deg)"; 
+    } 
+  
+  else {
+    caretImgDesktop.style.transform = "rotate(0deg)"; 
+  }
+  });
 });
