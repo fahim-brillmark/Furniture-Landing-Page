@@ -367,6 +367,121 @@ input::placeholder {
   z-index: -1;
 }
 
+/* Testimonials Stylings */
+
+.testimonial {
+  margin-top: 8em;
+}
+
+.testimonial > p {
+  font-size: 18px;
+  color: #e58411;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+
+.testimonial > h2 {
+  font-size: 42px;
+  color: #1e1e1e;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.testimonials-wrapper {
+  padding: 0 35px;
+}
+
+.testimonial-bg {
+  width: 100%;
+}
+
+.testimonial-card {
+  position: relative;
+  filter: drop-shadow(0 4px 1px rgba(0, 0, 0, 0.4));
+}
+
+.testimonial-card-wrapper {
+  padding: 10px;
+}
+.card {
+  position: absolute;
+  z-index: 10;
+  width: 80%;
+  left: 8%;
+
+  bottom: 30px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.profile-pic {
+  position: relative;
+}
+
+.splide__arrow {
+  background-color: white !important;
+  opacity: 1 !important;
+  top: 30% !important;
+  font-size: 20px !important;
+  filter: drop-shadow(0 8px 1rem rgba(0,0,0,0.2));
+  padding: 30px !important;
+}
+
+.circle {
+  position: absolute;
+  z-index: -1;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+}
+
+.profile-pic img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -47px;
+}
+
+.profile-info {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 16px;
+}
+
+.profile-info h2 {
+  margin: 0;
+  font-size: 18px;
+  padding-top: 16px;
+}
+
+.profile-info p {
+  margin: 4px 0 0;
+  color: #1e1e1e;
+  font-size: 12px;
+}
+
+.quote {
+  color: #1e1e1e;
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.stars {
+  text-align: center;
+  padding-bottom: 22px;
+}
 /* Footer Stylings */
 
 .footer {
@@ -519,6 +634,12 @@ input::placeholder {
 }
 
 /* Mobile Stylings */
+
+@media screen and (max-width: 400px) and (min-width: 300px) {
+  .card {
+    bottom: 5px;
+  }
+}
 
 @media screen and (max-width: 767px) {
   nav {
@@ -704,7 +825,7 @@ input::placeholder {
     justify-content: center;
   }
 
-  .gallery-img-box { 
+  .gallery-img-box {
     display: none;
   }
 
