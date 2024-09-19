@@ -152,6 +152,7 @@ input::placeholder {
 /* Why choosing us stylings */
 
 .why-choose-us {
+  margin-top: 5rem;
   display: flex;
   align-items: center;
 }
@@ -346,7 +347,6 @@ input::placeholder {
   display: flex;
   gap: 12px;
 }
-
 
 /* Desktop Stylings */
 
@@ -597,7 +597,7 @@ input::placeholder {
     text-align: center;
   }
 
-  .bottom-footer { 
+  .bottom-footer {
     flex-direction: column;
   }
 }
