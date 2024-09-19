@@ -189,6 +189,8 @@ input::placeholder {
   color: #e58411;
 }
 
+/* Experiences Stylings */
+
 .experiences {
   margin-top: 7rem;
   display: flex;
@@ -266,6 +268,103 @@ input::placeholder {
 .more-info-experiences > p {
   font-size: 14px;
   color: #e58411;
+}
+
+/* Materials Stylings */
+
+.materials {
+  margin-top: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.materials-img-wrapper {
+  width: 70%;
+  position: relative;
+}
+
+.materials-img {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 35px 52px -24px rgba(0, 0, 0, 0.42);
+}
+
+.materials-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-left: calc(2rem + 1vw);
+}
+
+.gallery-container {
+  width: 100%;
+  display: flex;
+  gap: 37px;
+}
+
+.gallery-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 43px;
+}
+
+.gallery-right {
+  display: flex;
+  align-items: flex-end;
+}
+
+.gallery-item img {
+  width: 100%;
+  box-shadow: 0 20px 24px rgba(0, 0, 0, 0.2);
+}
+
+.materials-title {
+  font-size: 18px;
+  color: #e58411;
+  font-weight: 600;
+  margin: 0;
+}
+
+.materials-details > h3 {
+  font-size: 42px;
+  color: #1e1e1e;
+  margin: 0;
+}
+
+.materials-text {
+  font-size: 18px;
+  color: rgba(30, 30, 30, 0.8);
+  margin: 0;
+}
+
+.more-info-materials {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.more-info-materials > p {
+  font-size: 14px;
+  color: #e58411;
+}
+
+.gallery-right > .gallery-item {
+  position: relative;
+}
+
+.gallery-img-box {
+  position: absolute;
+  width: 65%;
+  height: 50%;
+  top: -50px;
+  right: 0;
+  border-radius: 20px 0 0 0;
+  background: #f7f7f7;
+  z-index: -1;
 }
 
 /* Footer Stylings */
@@ -583,6 +682,29 @@ input::placeholder {
 
   .experience-img-box-1,
   .experience-img-box-2 {
+    display: none;
+  }
+
+  /* Materials Stylings */
+
+  .materials {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .materials-details {
+    padding: 0 calc(2rem + 1vw);
+  }
+
+  .gallery-container-wrapper {
+    padding-left: calc(2rem + 1vw);
+  }
+
+  .more-info-materials {
+    justify-content: center;
+  }
+
+  .gallery-img-box { 
     display: none;
   }
 
