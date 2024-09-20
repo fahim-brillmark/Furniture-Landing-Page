@@ -10,17 +10,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const caretImgDesktop = document.querySelectorAll(".caret-img")[0]
   hamburger.addEventListener("click", () => {
     console.log("hamburger clicked");
-      navMenu.classList.toggle("active");
+      navMenu.classList.toggle("active-nav");
   });
 
 
   firstNavLinkMobile.addEventListener("click", (event) => {
     event.preventDefault();
       console.log('firstNavLink clicked');
-      submenu.classList.toggle("active"); 
+      submenu.classList.toggle("active-nav"); 
 
    
-    if (submenu.classList.contains("active")) {
+    if (submenu.classList.contains("active-nav")) {
       caretImg.style.transform = "rotate(180deg)"; 
     } 
   
@@ -32,10 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
   firstNavLinkDesktop.addEventListener("click", (event) => {
     event.preventDefault();
       console.log('firstNavLink clicked');
-      submenuDesktop.classList.toggle("active"); 
+      submenuDesktop.classList.toggle("active-nav"); 
 
    
-    if (submenuDesktop.classList.contains("active")) {
+    if (submenuDesktop.classList.contains("active-nav")) {
       caretImgDesktop.style.transform = "rotate(180deg)"; 
     } 
   
