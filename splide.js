@@ -56,6 +56,8 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   }).mount();
 
+  // Testimonials Slider
+
   new Splide("#slider2", {
     type: "loop",
     perPage: 3,

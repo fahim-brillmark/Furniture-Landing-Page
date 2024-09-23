@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const caretImg = document.querySelectorAll(".caret-img")[1];
   const caretImgDesktop = document.querySelectorAll(".caret-img")[0];
   let navMenuHeight = navMenu.offsetHeight + 8;
-  
 
   console.log("hey", submenu.classList.contains('active-nav'))
   hamburger.addEventListener("click", () => {
@@ -29,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const submenuMobileHeight = submenu.offsetHeight;
     console.log("submenu mobile height", submenuMobileHeight);
     event.preventDefault();
-    // console.log("firstNavLink clicked");
+
     submenu.classList.toggle("active-nav");
 
     if (submenu.classList.contains("active-nav")) {
@@ -49,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   firstNavLinkDesktop.addEventListener("click", (event) => {
     event.preventDefault();
-    // console.log("firstNavLink clicked");
+    
     submenuDesktop.classList.toggle("active-nav");
 
     if (submenuDesktop.classList.contains("active-nav")) {
